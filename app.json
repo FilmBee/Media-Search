@@ -1,0 +1,159 @@
+{
+    "name": "Media Search bot",
+    "description": "When you going to send file on telegram channel/group this bot will save that in database, So you can search that easily in inline mode",
+    "keywords": [
+      "telegram",
+      "best",
+      "indian",
+      "pyrogram",
+      "media",
+      "search",
+      "channel",
+      "index",
+      "inline"
+    ],
+    "website": "https://github.com/Mahesh0253/Media-Search-bot",
+    "repository": "https://github.com/Mahesh0253/Media-Search-bot",
+    "env": {
+        "BOT_TOKEN": {
+            "description": "Your bot token.",
+            "value": ""
+        },
+        "USERBOT_STRING_SESSION": {
+            "description": "User bot string session.",
+            "value": "",
+            "required": false
+        },
+        "API_ID": {
+            "description": "Get this value from https://my.telegram.org",
+            "value": ""
+        },
+        "API_HASH": {
+            "description": "Get this value from https://my.telegram.org",
+            "value": ""
+        },
+        "CHANNELS": {
+            "description": "Username or ID of channel or group. Separate multiple IDs by space.",
+            "value": ""
+        },
+        "ADMINS": {
+            "description": "Username or ID of Admin. Separate multiple Admins by space.",
+            "value": ""
+        },
+        "AUTH_USERS": {
+            "description": "Username or ID of users to give access of inline search. Separate multiple users by space. Leave it empty if you don't want to restrict bot usage.",
+            "value": "",
+            "required": false
+        },
+        "AUTH_CHANNEL": {
+            "description": "Username or ID of channel. Without subscribing this channel users cannot use bot.",
+            "value": "",
+            "required": false
+        },
+        "START_MSG": {
+            "description": "Welcome message for start command",
+            "value": "**Hi, I'm Media Search bot**\n\nHere you can search files in inline mode. Just press following buttons and start searching.",
+            "required": false
+        },
+        "INVITE_MSG": {
+            "description": "Auth channel invitation message",
+            "value": "Please join @.... to use this bot",
+            "required": false
+        },
+        "USE_CAPTION_FILTER": {
+            "description": "Whether bot should use captions to improve search results. (True False)",
+            "value": "False",
+            "required": false
+        },
+        "CACHE_TIME": {
+            "description": "The maximum amount of time in seconds that the result of the inline query may be cached on the server",
+            "value": "300",
+            "required": false
+        },
+        "DATABASE_URI": {
+            "description": "mongoDB URI (legacy, not used if using separate DBs for movies/series).",
+            "value": "",
+            "required": false
+        },
+        "DATABASE_NAME": {
+            "description": "Name of the database in mongoDB (legacy, not used if using separate DBs for movies/series).",
+            "value": "",
+            "required": false
+        },
+        "COLLECTION_NAME": {
+            "description": "Name of the collections. Defaults to Telegram_files. If you are using the same database, then use different collection name for each bot",
+            "value": "Telegram_files",
+            "required": false
+        },
+        "DATABASE_URI_MOVIE": {
+            "description": "MongoDB URI for movie files database.",
+            "value": ""
+        },
+        "DATABASE_NAME_MOVIE": {
+            "description": "Database name for movie files.",
+            "value": ""
+        },
+        "COLLECTION_NAME_MOVIE": {
+            "description": "Collection name for movie files.",
+            "value": "movie_files",
+            "required": false
+        },
+        "DATABASE_URI_SERIES": {
+            "description": "MongoDB URI for series files database.",
+            "value": ""
+        },
+        "DATABASE_NAME_SERIES": {
+            "description": "Database name for series files.",
+            "value": ""
+        },
+        "COLLECTION_NAME_SERIES": {
+            "description": "Collection name for series files.",
+            "value": "series_files",
+            "required": false
+        },
+        "USERDATA_DB_URI": {
+            "description": "MongoDB URI for user/referral/admin data.",
+            "value": ""
+        },
+        "USERDATA_DB_NAME": {
+            "description": "Database name for user/referral/admin data.",
+            "value": "UserData",
+            "required": false
+        },
+        "USERDATA_COLLECTION": {
+            "description": "Collection name for user/referral/admin data.",
+            "value": "users",
+            "required": false
+        },
+        "ENABLE_REFERRAL": {
+            "description": "Enable referral system (True/False).",
+            "value": "False",
+            "required": false
+        },
+        "REQUIRED_REFERRALS": {
+            "description": "Number of successful referrals required to unlock bot.",
+            "value": "1",
+            "required": false
+        },
+        "MOVIE_CHANNEL_ID": {
+            "description": "Channel/group ID for movies (use -100... format).",
+            "value": ""
+        },
+        "SERIES_CHANNEL_ID": {
+            "description": "Channel/group ID for series (use -100... format).",
+            "value": ""
+        }
+    },
+    "addons": [],
+    "buildpacks": [
+        {
+            "url": "heroku/python"
+        }
+    ],
+    "formation": {
+        "worker": {
+            "quantity": 1,
+            "size": "eco"
+        }
+    }
+}
