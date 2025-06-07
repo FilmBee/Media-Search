@@ -70,7 +70,6 @@
             "value": "300",
             "required": false
         },
-
         "DATABASE_URI_MOVIE": {
             "description": "MongoDB URI for movie files database.",
             "value": ""
