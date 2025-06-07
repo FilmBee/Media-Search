@@ -70,10 +70,6 @@
             "value": "300",
             "required": false
         },
-        // Remove legacy single DB config
-        // "DATABASE_URI": { ... },
-        // "DATABASE_NAME": { ... },
-        // "COLLECTION_NAME": { ... },
 
         "DATABASE_URI_MOVIE": {
             "description": "MongoDB URI for movie files database.",
