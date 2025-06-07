@@ -32,10 +32,6 @@
             "description": "Get this value from https://my.telegram.org",
             "value": ""
         },
-        "CHANNELS": {
-            "description": "Username or ID of channel or group. Separate multiple IDs by space.",
-            "value": ""
-        },
         "ADMINS": {
             "description": "Username or ID of Admin. Separate multiple Admins by space.",
             "value": ""
@@ -50,24 +46,9 @@
             "value": "",
             "required": false
         },
-        "START_MSG": {
-            "description": "Welcome message for start command",
-            "value": "**Hi, I'm Media Search bot**\n\nHere you can search files in inline mode. Just press following buttons and start searching.",
-            "required": false
-        },
-        "INVITE_MSG": {
-            "description": "Auth channel invitation message",
-            "value": "Please join @.... to use this bot",
-            "required": false
-        },
-        "USE_CAPTION_FILTER": {
-            "description": "Whether bot should use captions to improve search results. (True False)",
-            "value": "False",
-            "required": false
-        },
-        "CACHE_TIME": {
-            "description": "The maximum amount of time in seconds that the result of the inline query may be cached on the server",
-            "value": "300",
+        "CHANNELS": {
+            "description": "Optional: Username or ID of channel or group for legacy/multi-channel indexing. Separate multiple IDs by space. Not needed if using MOVIE_CHANNEL_ID and SERIES_CHANNEL_ID.",
+            "value": "",
             "required": false
         },
         "DATABASE_URI_MOVIE": {
@@ -127,6 +108,26 @@
         "SERIES_CHANNEL_ID": {
             "description": "Channel/group ID for series (use -100... format).",
             "value": ""
+        },
+        "CACHE_TIME": {
+            "description": "The maximum amount of time in seconds that the result of the inline query may be cached on the server",
+            "value": "300",
+            "required": false
+        },
+        "USE_CAPTION_FILTER": {
+            "description": "Whether bot should use captions to improve search results. (True False)",
+            "value": "False",
+            "required": false
+        },
+        "START_MSG": {
+            "description": "Welcome message for start command",
+            "value": "**Hi, I'm Media Search bot**\n\nHere you can search files in inline mode. Just press following buttons and start searching.",
+            "required": false
+        },
+        "INVITE_MSG": {
+            "description": "Auth channel invitation message",
+            "value": "Please join @.... to use this bot",
+            "required": false
         }
     },
     "addons": [],
