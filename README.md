@@ -64,11 +64,20 @@ docker run -d \
 * `API_HASH`: Get this value from [telegram.org](https://my.telegram.org/apps)
 * `CHANNELS`: Username or ID of channel or group. Separate multiple IDs by space
 * `ADMINS`: Username or ID of Admin. Separate multiple Admins by space
-* `DATABASE_URI`: [mongoDB](https://www.mongodb.com) URI. Get this value from [mongoDB](https://www.mongodb.com). For more help watch this [Join Telegram Support Group](https://t.me://webcoderhub)
-* `DATABASE_NAME`: Name of the database in [mongoDB](https://www.mongodb.com). For more help watch this [video](https://youtu.be/dsuTn4qV2GA)
+
+* `DATABASE_URI_MOVIE`: MongoDB URI for movie files database.
+* `DATABASE_NAME_MOVIE`: Database name for movie files.
+* `COLLECTION_NAME_MOVIE`: Collection name for movie files.
+
+* `DATABASE_URI_SERIES`: MongoDB URI for series files database.
+* `DATABASE_NAME_SERIES`: Database name for series files.
+* `COLLECTION_NAME_SERIES`: Collection name for series files.
+
+* `USERDATA_DB_URI`: MongoDB URI for user/referral/admin data.
+* `USERDATA_DB_NAME`: Database name for user/referral/admin data.
+* `USERDATA_COLLECTION`: Collection name for user/referral/admin data.
 
 ### Optional Variables
-* `COLLECTION_NAME`: Name of the collections. Defaults to Telegram_files. If you going to use same database, then use different collection name for each bot
 * `CACHE_TIME`: The maximum amount of time in seconds that the result of the inline query may be cached on the server
 * `USE_CAPTION_FILTER`: Whether bot should use captions to improve search results. (True/False)
 * `AUTH_USERS`: Username or ID of users to give access of inline search. Separate multiple users by space. Leave it empty if you don't want to restrict bot usage.
@@ -76,6 +85,11 @@ docker run -d \
 * `START_MSG`: Welcome message for start command.
 * `INVITE_MSG`: Auth channel invitation message.
 * `USERBOT_STRING_SESSION`: User bot string session.
+* `ENABLE_REFERRAL`: Enable referral system (True/False).
+* `REQUIRED_REFERRALS`: Number of successful referrals required to unlock bot.
+* `MOVIE_CHANNEL_ID`: Channel/group ID for movies (use -100... format).
+* `SERIES_CHANNEL_ID`: Channel/group ID for series (use -100... format).
+
 ## Admin commands
 ```
 channel - Get basic infomation about channels

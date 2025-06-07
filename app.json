@@ -70,21 +70,11 @@
             "value": "300",
             "required": false
         },
-        "DATABASE_URI": {
-            "description": "mongoDB URI (legacy, not used if using separate DBs for movies/series).",
-            "value": "",
-            "required": false
-        },
-        "DATABASE_NAME": {
-            "description": "Name of the database in mongoDB (legacy, not used if using separate DBs for movies/series).",
-            "value": "",
-            "required": false
-        },
-        "COLLECTION_NAME": {
-            "description": "Name of the collections. Defaults to Telegram_files. If you are using the same database, then use different collection name for each bot",
-            "value": "Telegram_files",
-            "required": false
-        },
+        // Remove legacy single DB config
+        // "DATABASE_URI": { ... },
+        // "DATABASE_NAME": { ... },
+        // "COLLECTION_NAME": { ... },
+
         "DATABASE_URI_MOVIE": {
             "description": "MongoDB URI for movie files database.",
             "value": ""

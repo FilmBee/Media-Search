@@ -26,7 +26,7 @@ AUTH_USERS = (auth_users + ADMINS) if auth_users else []
 auth_channel = environ.get('AUTH_CHANNEL')
 AUTH_CHANNEL = int(auth_channel) if auth_channel and id_pattern.search(auth_channel) else auth_channel
 
-# MongoDB information
+# MongoDB information (ONLY 3 DBs)
 DATABASE_URI_MOVIE = environ['DATABASE_URI_MOVIE']
 DATABASE_NAME_MOVIE = environ['DATABASE_NAME_MOVIE']
 COLLECTION_NAME_MOVIE = environ.get('COLLECTION_NAME_MOVIE', 'movie_files')
